@@ -1,0 +1,24 @@
+server:
+  port: 8009
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    config:
+      uri: http://localhost:8001
+      fail-fast: true
+      retry:
+        max-attempts: 6
+        initial-interval: 2000
+
+
+
+
